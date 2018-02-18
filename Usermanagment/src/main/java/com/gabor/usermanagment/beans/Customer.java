@@ -1,7 +1,7 @@
 package com.gabor.usermanagment.beans;
 
 public class Customer {
-	
+	  // Test
 private long customerID;
 private String customerName;
 private String customerAddress;
