@@ -1,3 +1,4 @@
-Main.class
+com\gabor\usermanagment\api\customerAPI.class
 com\gabor\usermanagment\dao\CustomerDao.class
+com\gabor\usermanagment\Main.class
 com\gabor\usermanagment\beans\Customer.class

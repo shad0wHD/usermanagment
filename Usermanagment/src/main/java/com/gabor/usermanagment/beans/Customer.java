@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 
 @Entity
 @Table(name = "tbl_customer")
@@ -16,11 +18,14 @@ public class Customer {
 	@Column(name="customerID")
 	private long customerID;
 	@Column(name="customerName")
+	@NotBlank
 	private String customerName;
 	@Column(name="customerAddress")
+	@NotBlank
 	private String customerAddress;
-	@Column(name="customerPhonenNumber")
-	private String customerPhonenNumber;
+	@Column(name="customerPhoneNumber")
+	@NotBlank
+	private String customerPhoneNumber;
 
 	public long getCustomerID() {
 		return customerID;
@@ -46,12 +51,12 @@ public class Customer {
 		this.customerAddress = customerAddress;
 	}
 
-	public String getCustomerPhonenNumber() {
-		return customerPhonenNumber;
+	public String getCustomerPhoneNumber() {
+		return customerPhoneNumber;
 	}
 
-	public void setCustomerPhonenNumber(String customerPhonenNumber) {
-		this.customerPhonenNumber = customerPhonenNumber;
+	public void setCustomerPhoneNumber(String customerPhoneNumber) {
+		this.customerPhoneNumber = customerPhoneNumber;
 
 	}
 
@@ -59,19 +64,19 @@ public class Customer {
 		super();
 	}
 
-	public Customer(long customerID, String customerName, String customerAddress, String customerPhonenNumber) {
+	public Customer(long customerID, String customerName, String customerAddress, String customerPhoneNumber) {
 		super();
 		this.customerID = customerID;
 		this.customerName = customerName;
 		this.customerAddress = customerAddress;
-		this.customerPhonenNumber = customerPhonenNumber;
+		this.customerPhoneNumber = customerPhoneNumber;
 
 	}
 
 	@Override
 	public String toString() {
 		return "Customer [customerID=" + customerID + ", customerName=" + customerName + ", customerAddress="
-				+ customerAddress + ", customerPhonenNumber=" + customerPhonenNumber + "]";
+				+ customerAddress + ", customerPhoneNumber=" + customerPhoneNumber + "]";
 	}
 
 }
