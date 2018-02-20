@@ -8,6 +8,8 @@ import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotBlank;
 
+import io.swagger.annotations.ApiModelProperty;
+
 
 @Entity
 @Table(name = "tbl_customer")
@@ -15,14 +17,18 @@ public class Customer {
 
 	@Id
 	@GeneratedValue 
+	@ApiModelProperty(notes = "Automatically generated ID")
 	@Column(name="customerID")
 	private long customerID;
+	@ApiModelProperty(notes = "Customer's name")
 	@Column(name="customerName")
 	@NotBlank
 	private String customerName;
+	@ApiModelProperty(notes = "Customer's address")
 	@Column(name="customerAddress")
 	@NotBlank
 	private String customerAddress;
+	@ApiModelProperty(notes = "Customer's Phone number")
 	@Column(name="customerPhoneNumber")
 	@NotBlank
 	private String customerPhoneNumber;
